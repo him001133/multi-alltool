@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Calculator</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculator</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <a href="../../index.html" class="back">⬅ Back</a>
-    <h1>Calculator</h1>
-  </header>
+
+<div id="header-container"></div>
+
+<div class="container">
+
+  <h1>Calculator</h1>
 
   <main class="calc">
-    <input type="text" id="display" placeholder="0" disabled />
+    <input type="text" id="display" disabled />
     <div class="buttons">
       <button>C</button>
       <button>%</button>
@@ -40,6 +42,15 @@
     </div>
   </main>
 
-  <script src="script.js"></script>
+</div>
+
+<div id="footer-container"></div>
+
+<script src="script.js"></script>
+<script>
+  fetch("../../includes/header.html").then(r=>r.text()).then(h=>header_container.innerHTML=h);
+  fetch("../../includes/footer.html").then(r=>r.text()).then(f=>footer_container.innerHTML=f);
+</script>
+
 </body>
 </html>

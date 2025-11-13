@@ -1,36 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Unit Converter</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit Converter</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <a href="../../index.html" class="back">⬅ Back</a>
-    <h1>Unit Converter</h1>
-  </header>
 
-  <main class="converter">
-    <label for="type">Conversion Type:</label>
-    <select id="type">
-      <option value="length">Length</option>
-      <option value="weight">Weight</option>
-      <option value="temperature">Temperature</option>
-    </select>
+<div id="header-container"></div>
 
-    <input type="number" id="inputValue" placeholder="Enter value" />
-    <div class="selects">
-      <select id="fromUnit"></select>
-      <span>→</span>
-      <select id="toUnit"></select>
-    </div>
+<h1>Unit Converter</h1>
 
-    <input type="text" id="result" placeholder="Result" readonly />
-    <button id="convertBtn">Convert</button>
-  </main>
+<div class="converter">
+  <label>Type</label>
+  <select id="type">
+    <option value="length">Length</option>
+    <option value="weight">Weight</option>
+    <option value="temperature">Temperature</option>
+  </select>
 
-  <script src="script.js"></script>
+  <input id="inputValue" type="number" placeholder="Value">
+  <select id="fromUnit"></select>
+  <select id="toUnit"></select>
+
+  <input id="result" readonly placeholder="Result">
+  <button id="convertBtn">Convert</button>
+</div>
+
+<div id="footer-container"></div>
+
+<script src="script.js"></script>
+<script>
+  fetch("../../includes/header.html").then(r=>r.text()).then(h=>header_container.innerHTML=h);
+  fetch("../../includes/footer.html").then(r=>r.text()).then(f=>footer_container.innerHTML=f);
+</script>
+
 </body>
 </html>
