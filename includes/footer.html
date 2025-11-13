@@ -1,0 +1,36 @@
+<footer class="global-footer">
+  <p>
+    © <span id="year"></span> AllTools. All Rights Reserved.
+    <br>
+    <a href="../pages/terms.html">Terms & Conditions</a> |
+    <a href="../pages/privacy.html">Privacy Policy</a> |
+    <a href="../pages/disclaimer.html">Disclaimer</a> |
+    <a href="../pages/about.html">About</a> |
+    <a href="../pages/contact.html">Contact</a>
+  </p>
+</footer>
+
+<style>
+  .global-footer {
+    text-align: center;
+    padding: 25px;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 40px;
+  }
+
+  .global-footer a {
+    color: #00eeff;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .global-footer a:hover {
+    text-decoration: underline;
+  }
+</style>
+
+<script>
+  // dynamic year
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
