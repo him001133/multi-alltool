@@ -8,14 +8,18 @@
 </head>
 
 <body>
- 
-<!-- HEADER -->
+
+<!-- GLOBAL HEADER (from includes/header.html) -->
 <div id="header-container"></div>
 
-<!-- CALCULATOR FIRST -->
-<div class="container">
+<!-- LOCAL PAGE TITLE -->
+<header class="page-header">
+  <h1>Online Calculator</h1>
+  <p>Fast • Simple • Accurate</p>
+</header>
 
-  <h1 class="tool-title">Calculator</h1>
+<!-- CALCULATOR TOOL SECTION -->
+<div class="container">
 
   <main class="calc">
     <input type="text" id="display" disabled>
@@ -48,7 +52,7 @@
 
 </div>
 
-<!-- DESCRIPTION BELOW CALCULATOR -->
+<!-- DESCRIPTION BELOW THE CALCULATOR -->
 <section class="description-box">
 
   <h1 class="desc-title">✏️ Online Calculator – Free, Fast & Accurate</h1>
@@ -60,52 +64,53 @@
 
   <h2>Why Use Our Online Calculator?</h2>
   <ul>
-    <li><strong>Instant access</strong> — start computing immediately.</li>
-    <li><strong>Simple, intuitive UI</strong> for all ages.</li>
-    <li><strong>Ad-free experience</strong> — no popups, no clutter.</li>
-    <li><strong>Works everywhere</strong> — mobile, tablet & desktop.</li>
-    <li><strong>100% private</strong> — everything runs locally in your browser.</li>
+    <li><strong>Instant access</strong> — start calculating immediately</li>
+    <li><strong>Simple, intuitive UI</strong> suited for all ages</li>
+    <li><strong>Ad-free environment</strong> — clean and distraction-free</li>
+    <li><strong>Works everywhere</strong> — mobile, tablet, desktop</li>
+    <li><strong>100% private</strong> — stays in your browser</li>
   </ul>
 
   <h2>Features</h2>
   <ul>
-    <li>Basic arithmetic: +, −, ×, ÷</li>
+    <li>Basic arithmetic: +, –, ×, ÷</li>
     <li>Instant calculation updates</li>
     <li>Large responsive buttons</li>
-    <li>Clear button to reset</li>
-    <li>Lightweight, fast-loading & reliable</li>
+    <li>Reset with the <strong>C</strong> button</li>
+    <li>Fast and lightweight</li>
   </ul>
 
   <h2>Who Is It For?</h2>
   <ul>
-    <li>Students solving homework</li>
-    <li>Professionals who need quick math on the go</li>
-    <li>Everyday users calculating budgets or measurements</li>
+    <li>Students working on homework</li>
+    <li>Professionals calculating budgets or finances</li>
+    <li>Any everyday user needing quick math</li>
   </ul>
 
   <h2>How To Use</h2>
   <ul>
-    <li>Tap number/operator buttons</li>
-    <li>Press <strong>C</strong> to clear the screen</li>
+    <li>Tap numbers and operators</li>
+    <li>Press <strong>C</strong> to clear</li>
     <li>Press <strong>=</strong> to calculate</li>
     <li>Display updates instantly</li>
   </ul>
 
 </section>
 
-<!-- FOOTER -->
+<!-- GLOBAL FOOTER -->
 <div id="footer-container"></div>
 
+<!-- CALCULATOR LOGIC -->
 <script src="script.js"></script>
 
 <!-- LOAD HEADER + FOOTER -->
 <script>
   fetch("../../includes/header.html")
-    .then(res => res.text())
+    .then(r => r.text())
     .then(html => header_container.innerHTML = html);
 
   fetch("../../includes/footer.html")
-    .then(res => res.text())
+    .then(r => r.text())
     .then(html => footer_container.innerHTML = html);
 </script>
 
