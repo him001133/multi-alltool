@@ -9,7 +9,7 @@
 
 <body>
 
-<!-- GLOBAL HEADER (from includes/header.html) -->
+<!-- GLOBAL HEADER -->
 <div id="header-container"></div>
 
 <!-- LOCAL PAGE TITLE -->
@@ -18,7 +18,7 @@
   <p>Fast • Simple • Accurate</p>
 </header>
 
-<!-- CALCULATOR TOOL SECTION -->
+<!-- CALCULATOR SECTION -->
 <div class="container">
 
   <main class="calc">
@@ -52,7 +52,7 @@
 
 </div>
 
-<!-- DESCRIPTION BELOW THE CALCULATOR -->
+<!-- DESCRIPTION SECTION -->
 <section class="description-box">
 
   <h1 class="desc-title">✏️ Online Calculator – Free, Fast & Accurate</h1>
@@ -103,15 +103,19 @@
 <!-- CALCULATOR LOGIC -->
 <script src="script.js"></script>
 
-<!-- LOAD HEADER + FOOTER -->
+<!-- LOAD HEADER + FOOTER (FIXED VERSION) -->
 <script>
+  // safer DOM targeting
+  const headerContainer = document.getElementById("header-container");
+  const footerContainer = document.getElementById("footer-container");
+
   fetch("../../includes/header.html")
     .then(r => r.text())
-    .then(html => header_container.innerHTML = html);
+    .then(html => headerContainer.innerHTML = html);
 
   fetch("../../includes/footer.html")
     .then(r => r.text())
-    .then(html => footer_container.innerHTML = html);
+    .then(html => footerContainer.innerHTML = html);
 </script>
 
 </body>
