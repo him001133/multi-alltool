@@ -13,10 +13,28 @@
     color: #fff;
   }
 
+  /* LOCAL PAGE HEADER (NEW) */
+  .page-header {
+    text-align: center;
+    margin-top: 130px;
+    color: #fff;
+  }
+
+  .page-header h1 {
+    font-size: 2.6rem;
+    margin-bottom: 5px;
+    font-weight: 600;
+  }
+
+  .page-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+  }
+
   /* --- HERO SECTION --- */
   .hero {
     text-align: center;
-    padding: 140px 20px 60px;
+    padding: 60px 20px 60px;
   }
 
   .hero h1 {
@@ -87,8 +105,14 @@
 </head>
 <body>
 
-<!-- HEADER -->
+<!-- GLOBAL HEADER -->
 <div id="header-container"></div>
+
+<!-- LOCAL HOME PAGE HEADER -->
+<header class="page-header">
+  <h1>Welcome to AllTools</h1>
+  <p>Your Free Online Multi-Tool Hub</p>
+</header>
 
 <!-- HERO SECTION -->
 <section class="hero">
@@ -135,7 +159,7 @@
 
   <!-- BUTTON LINKS -->
   <div id="tools" class="tools-buttons">
-    <button class="btn" onclick="location.href='tools/calculator/index.html'">🧮 Online Calculator</button>
+    <button class="btn" onclick="location.href='tools/calculator/index.html'">🧮 Calculator</button>
     <button class="btn" onclick="location.href='tools/unit-converter/index.html'">📏 Unit Converter</button>
     <button class="btn" onclick="location.href='tools/mortgage-calculator/index.html'">🏡 Mortgage Calculator</button>
     <button class="btn" onclick="location.href='tools/timer/index.html'">⏱ Timer</button>
@@ -160,13 +184,21 @@
   </p>
 </div>
 
-<!-- FOOTER -->
+<!-- GLOBAL FOOTER -->
 <div id="footer-container"></div>
 
 <!-- LOAD HEADER + FOOTER -->
 <script>
-  fetch("includes/header.html").then(r=>r.text()).then(h=>header_container.innerHTML = h);
-  fetch("includes/footer.html").then(r=>r.text()).then(f=>footer_container.innerHTML = f);
+  const headerContainer = document.getElementById("header-container");
+  const footerContainer = document.getElementById("footer-container");
+
+  fetch("includes/header.html")
+    .then(r => r.text())
+    .then(html => headerContainer.innerHTML = html);
+
+  fetch("includes/footer.html")
+    .then(r => r.text())
+    .then(html => footerContainer.innerHTML = html);
 </script>
 
 </body>
