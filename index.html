@@ -1,52 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AllTools</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AllTools – Free Online Calculator & Utility Tools</title>
 
 <style>
-  * { font-family: "Poppins"; box-sizing: border-box; }
+  * { font-family: "Poppins", sans-serif; box-sizing: border-box; }
   body {
     margin: 0;
-    background: linear-gradient(135deg,#4facfe,#00f2fe);
-    color: white;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    color: #fff;
+  }
+
+  /* --- HERO SECTION --- */
+  .hero {
+    text-align: center;
+    padding: 140px 20px 60px;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+
+  .hero p.subtitle {
+    margin-top: 15px;
+    font-size: 1.3rem;
+    opacity: 0.9;
+  }
+
+  /* --- INTRO TEXT --- */
+  .content-section {
+    max-width: 850px;
+    margin: 40px auto;
+    background: rgba(255,255,255,0.15);
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    line-height: 1.8;
+    font-size: 1.05rem;
+  }
+
+  h2.section-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+
+  /* --- BUTTONS --- */
+  .tools-buttons {
+    margin-top: 30px;
     text-align: center;
   }
-  h1 { margin-top: 120px; font-size: 3rem; }
+
   .btn {
     padding: 15px 40px;
-    background: white;
+    background: #fff;
     color: #0072ff;
+    border: none;
     border-radius: 10px;
-    font-size: 1.2rem;
-    cursor:pointer;
-    transition:.3s;
-    border:none;
-    margin:10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+    margin: 10px;
   }
-  .btn:hover { transform: scale(1.05); background:#0072ff; color:white; }
+
+  .btn:hover {
+    transform: scale(1.05);
+    background: #0072ff;
+    color: #fff;
+  }
+
+  /* UPCOMING SECTION */
+  ul {
+    margin-top: 10px;
+    padding-left: 20px;
+  }
+  ul li {
+    margin-bottom: 8px;
+    font-size: 1.05rem;
+  }
 </style>
 
 </head>
 <body>
 
+<!-- HEADER -->
 <div id="header-container"></div>
 
-<h1>Welcome to AllTools</h1>
-<div id="tools">
-  <button class="btn" onclick="location.href='tools/calculator/index.html'">🧮 Calculator</button>
-  <button class="btn" onclick="location.href='tools/unit-converter/index.html'">⚖️ Unit Converter</button>
-  <button class="btn" onclick="location.href='tools/mortgage-calculator/index.html'">🏡 Mortgage Calculator</button>
-  <button class="btn" onclick="location.href='tools/timer/index.html'"> ⏱ Timer </button>
+<!-- HERO SECTION -->
+<section class="hero">
+  <h1>⭐ AllTools – Your Free Online Multi-Tool Hub</h1>
+  <p class="subtitle">Smart, Fast & Easy Tools for Everyday Tasks</p>
+</section>
 
+<!-- INTRO TEXT -->
+<div class="content-section">
+  <p>
+    Welcome to <strong>AllTools</strong>, your one-stop destination for a growing collection
+    of free online tools designed to make your daily tasks simpler, faster,
+    and more accurate. Whether you need to calculate, convert, measure, or
+    manage time, AllTools provides clean, fast, and reliable utilities — all
+    in one place.
+  </p>
+
+  <h2 class="section-title">🚀 Why AllTools?</h2>
+
+  <p>
+    AllTools brings the most essential tools together on a single platform.
+    No downloads. No signup. No distractions. Just instant access to accurate,
+    user-friendly utilities built for students, professionals, homeowners,
+    freelancers, and everyday users.
+  </p>
+
+  <h2 class="section-title">🔧 Our Most Popular Tools</h2>
+
+  <p><strong>🧮 Online Calculator</strong><br>
+    A fast, lightweight, and accurate free calculator for simple math.
+  </p>
+
+  <p><strong>📏 Unit Converter Tool</strong><br>
+    Convert length, weight, temperature, speed and more in seconds.
+  </p>
+
+  <p><strong>🏡 Mortgage Calculator</strong><br>
+    Calculate EMI, total interest, and loan details instantly.
+  </p>
+
+  <p><strong>⏱ Timer Tool</strong><br>
+    A clean, reliable timer for workouts, cooking, studying, and productivity.
+  </p>
+
+  <!-- BUTTON LINKS -->
+  <div id="tools" class="tools-buttons">
+    <button class="btn" onclick="location.href='tools/calculator/index.html'">🧮 Online Calculator</button>
+    <button class="btn" onclick="location.href='tools/unit-converter/index.html'">📏 Unit Converter</button>
+    <button class="btn" onclick="location.href='tools/mortgage-calculator/index.html'">🏡 Mortgage Calculator</button>
+    <button class="btn" onclick="location.href='tools/timer/index.html'">⏱ Timer Tool</button>
+  </div>
+
+  <h2 class="section-title">🌐 A Growing Collection of Free Tools</h2>
+
+  <p>Upcoming tools include:</p>
+  <ul>
+    <li>✔ Age Calculator</li>
+    <li>✔ Currency Converter</li>
+    <li>✔ Percentage Calculator</li>
+    <li>✔ Stopwatch & Alarm</li>
+    <li>✔ BMI Calculator</li>
+    <li>…and many more!</li>
+  </ul>
+
+  <p>
+    Explore all tools now and make your work easier with a clean, minimal,
+    ad-free interface.<br><br>
+    <strong>AllTools: Smart Tools. Simple Experience. Free Forever.</strong>
+  </p>
 </div>
 
+<!-- FOOTER -->
 <div id="footer-container"></div>
 
+<!-- LOAD HEADER + FOOTER -->
 <script>
-  fetch("includes/header.html").then(r=>r.text()).then(h=>document.getElementById("header-container").innerHTML=h);
-  fetch("includes/footer.html").then(r=>r.text()).then(f=>document.getElementById("footer-container").innerHTML=f);
+  fetch("includes/header.html").then(r=>r.text()).then(h=>header_container.innerHTML = h);
+  fetch("includes/footer.html").then(r=>r.text()).then(f=>footer_container.innerHTML = f);
 </script>
 
 </body>
