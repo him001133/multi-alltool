@@ -29,6 +29,7 @@ buttons.forEach(btn => {
     } else {
       currentInput += value;
     }
+
     display.value = currentInput;
   });
 });
