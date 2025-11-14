@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Timer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="header-container"></div>
+
+<h1 class="title">⏱ Timer</h1>
+
+<div class="timer-box">
+  <div id="timer-display">00:00:00</div>
+
+  <div class="controls">
+    <button id="start">Start</button>
+    <button id="pause">Pause</button>
+    <button id="reset">Reset</button>
+  </div>
+</div>
+
+<div id="footer-container"></div>
+
+<script src="script.js"></script>
+
+<script>
+  fetch("../../includes/header.html").then(r=>r.text()).then(h=>header_container.innerHTML=h);
+  fetch("../../includes/footer.html").then(r=>r.text()).then(f=>footer_container.innerHTML=f);
+</script>
+
+</body>
+</html>
