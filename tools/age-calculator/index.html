@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Age Calculator – Calculate Your Age Instantly | AllTools</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- GLOBAL HEADER -->
+<div id="header-container"></div>
+
+<!-- LOCAL PAGE HEADER -->
+<header class="page-header">
+  <h1>Age Calculator</h1>
+  <p>Enter your birthdate to calculate your exact age</p>
+</header>
+
+<!-- TOOL UI -->
+<div class="age-box">
+
+  <label for="birthdate">Select Your Birth Date</label>
+  <input type="date" id="birthdate">
+
+  <button id="calcBtn">Calculate Age</button>
+
+  <div id="resultBox">
+    <h2>Your Age:</h2>
+    <p id="output">—</p>
+  </div>
+
+</div>
+
+<!-- DESCRIPTION SECTION -->
+<section class="description-box">
+
+  <h1 class="desc-title">🎂 Free Online Age Calculator</h1>
+
+  <p>
+    The AllTools Age Calculator helps you find your exact age in years, months, and days.
+    Fast, accurate, and perfect for forms, school records, or personal use.
+  </p>
+
+  <h2>Why Use This Tool?</h2>
+  <ul>
+    <li>✔ Calculate accurate age instantly</li>
+    <li>✔ Works for any birthdate (past or future)</li>
+    <li>✔ Clean and simple interface</li>
+    <li>✔ Perfect for applications, events, and documents</li>
+  </ul>
+
+  <h2>What It Shows</h2>
+  <ul>
+    <li>Your age in <strong>years</strong></li>
+    <li>Your age in <strong>months</strong></li>
+    <li>Your age in <strong>days</strong></li>
+  </ul>
+
+  <h2>How To Use</h2>
+  <ul>
+    <li>Select your birthdate</li>
+    <li>Click <strong>Calculate Age</strong></li>
+    <li>View full age breakdown instantly</li>
+  </ul>
+
+</section>
+
+<!-- FOOTER -->
+<div id="footer-container"></div>
+
+<script src="script.js"></script>
+
+<!-- LOAD HEADER & FOOTER -->
+<script>
+  const headerContainer = document.getElementById("header-container");
+  const footerContainer = document.getElementById("footer-container");
+
+  fetch("../../includes/header.html")
+    .then(r => r.text())
+    .then(html => headerContainer.innerHTML = html);
+
+  fetch("../../includes/footer.html")
+    .then(r => r.text())
+    .then(html => footerContainer.innerHTML = html);
+</script>
+
+</body>
+</html>

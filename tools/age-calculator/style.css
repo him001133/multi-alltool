@@ -1,0 +1,101 @@
+/* General Reset */
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: #fff;
+}
+
+/* Page Header */
+.page-header {
+  text-align: center;
+  margin-top: 130px;
+  color: white;
+}
+
+.page-header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 5px;
+}
+
+.page-header p {
+  font-size: 1.2rem;
+  opacity: 0.85;
+}
+
+/* Age Calculator Box */
+.age-box {
+  max-width: 400px;
+  margin: 40px auto;
+  background: rgba(255,255,255,0.18);
+  padding: 25px;
+  border-radius: 16px;
+  text-align: center;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+}
+
+.age-box label {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.age-box input[type="date"] {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+#calcBtn {
+  width: 100%;
+  padding: 14px;
+  background: #00e676;
+  border: none;
+  border-radius: 12px;
+  color: #000;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+#calcBtn:hover {
+  background: #00c853;
+}
+
+/* Result Box */
+#resultBox {
+  margin-top: 25px;
+  padding: 20px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 12px;
+}
+
+#output {
+  font-size: 1.3rem;
+  margin-top: 10px;
+}
+
+/* Description Section */
+.description-box {
+  max-width: 900px;
+  margin: 50px auto 80px;
+  padding: 30px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  line-height: 1.8;
+}
+
+.desc-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
