@@ -1,0 +1,128 @@
+/* Global */
+* { box-sizing: border-box; font-family: "Poppins", sans-serif; }
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: white;
+}
+
+/* Page Header */
+.page-header {
+  text-align: center;
+  margin-top: 130px;
+}
+
+.page-header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 8px;
+}
+
+.page-header p {
+  font-size: 1.2rem;
+  opacity: 0.85;
+}
+
+/* Stopwatch Container */
+.stopwatch-container {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* Hourglass */
+.hourglass {
+  margin: 0 auto;
+  width: 140px;
+  height: 220px;
+  position: relative;
+}
+
+/* Hourglass Shape */
+.hourglass::before,
+.hourglass::after {
+  content: "";
+  position: absolute;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  background: rgba(255,255,255,0.2);
+  border: 3px solid white;
+}
+
+.hourglass::before {
+  top: 0;
+  border-bottom: none;
+  border-radius: 0 0 40% 40%;
+}
+
+.hourglass::after {
+  bottom: 0;
+  border-top: none;
+  border-radius: 40% 40% 0 0;
+}
+
+/* Sand */
+.sand-top, .sand-bottom {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  background: #ffe066;
+  transition: height 0.2s linear;
+}
+
+.sand-top {
+  top: 0;
+  height: 100%;
+  border-radius: 0 0 40% 40%;
+}
+
+.sand-bottom {
+  bottom: 0;
+  height: 0%;
+  border-radius: 40% 40% 0 0;
+}
+
+/* Digital timer */
+#display {
+  margin-top: 20px;
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+
+/* Buttons */
+.controls {
+  margin-top: 25px;
+}
+
+button {
+  padding: 12px 25px;
+  margin: 5px;
+  border: none;
+  border-radius: 10px;
+  background: white;
+  color: #0072ff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* Description */
+.description-box {
+  max-width: 900px;
+  margin: 50px auto 80px;
+  padding: 30px;
+  background: rgba(255,255,255,0.18);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.desc-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
