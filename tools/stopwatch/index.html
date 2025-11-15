@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stopwatch – Animated Hourglass | AllTools</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- GLOBAL HEADER -->
+<div id="header-container"></div>
+
+<!-- LOCAL PAGE HEADER -->
+<header class="page-header">
+  <h1>Stopwatch</h1>
+  <p>Track time with a live animated hourglass</p>
+</header>
+
+<!-- STOPWATCH UI -->
+<div class="stopwatch-container">
+
+  <!-- HOURGLASS -->
+  <div class="hourglass">
+    <div class="sand-top"></div>
+    <div class="sand-bottom"></div>
+  </div>
+
+  <!-- DIGITAL TIME -->
+  <div id="display">00:00:00</div>
+
+  <!-- BUTTONS -->
+  <div class="controls">
+    <button id="start">Start</button>
+    <button id="pause">Pause</button>
+    <button id="reset">Reset</button>
+  </div>
+
+</div>
+
+<!-- DESCRIPTION -->
+<section class="description-box">
+
+  <h1 class="desc-title">⏳ Animated Hourglass Stopwatch</h1>
+
+  <p>
+    This stopwatch is powered by a smooth CSS-animated hourglass. As time passes,
+    the sand falls from the top chamber and collects at the bottom, creating a
+    visually engaging way to track your time.
+  </p>
+
+  <h2>Features</h2>
+  <ul>
+    <li>Real-time stopwatch timer</li>
+    <li>Hourglass animation synced to elapsed time</li>
+    <li>Start, pause, and reset controls</li>
+    <li>Accurate digital time display</li>
+  </ul>
+
+</section>
+
+<!-- GLOBAL FOOTER -->
+<div id="footer-container"></div>
+
+<script src="script.js"></script>
+
+<!-- LOAD HEADER + FOOTER -->
+<script>
+  const headerContainer = document.getElementById("header-container");
+  const footerContainer = document.getElementById("footer-container");
+
+  fetch("../../includes/header.html")
+    .then(r => r.text())
+    .then(html => headerContainer.innerHTML = html);
+
+  fetch("../../includes/footer.html")
+    .then(r => r.text())
+    .then(html => footerContainer.innerHTML = html);
+</script>
+
+</body>
+</html>
